@@ -1,2 +1,9 @@
 /node_modules
 .env
+
+dashboard/.DS_Store
+dashboard/node_modules/
+dashboard/dist/
+dashboard/npm-debug.log
+dashboard/yarn-error.log
+dashboard/.idea/
