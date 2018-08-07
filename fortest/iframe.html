@@ -49,9 +49,10 @@
         }
 
     </style>
+
 </head>
 <body>
-<form action="/" class="ecwid-iframe">
+<form action="/" class="ecwid-iframe" name="payment-data">
     <div class="form-group">
         <label for="firstname">firstname: </label>
         <input type="text" name="firstname" id="firstname"/>
@@ -69,25 +70,29 @@
 
     <input type="submit" name="submit"/>
 </form>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+<script language="JavaScript">
 
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    $( document ).ready(function() {
+        console.log( "ready!" );
 
-</body>
-<script type="text/javascript">
-    const axios = require('axios');
+        const submit = function () {
 
-    // Make a request for a user with a given ID
-    axios.get('/user?ID=12345')
-        .then(function (response) {
-            // handle success
-            console.log(response);
-        })
-        .catch(function (error) {
-            // handle error
-            console.log(error);
-        })
-        .then(function () {
-            // always executed
+        }
+
+        $.ajax({
+            url: "http://www.speak2go.com",
+            method: "GET",
+        }).done(res => {
+            console.log('res', res);
         });
+
+    });
+    // Make a request for a user with a given ID
 </script>
+</body>
+
 </html>
